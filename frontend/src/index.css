@@ -63,6 +63,23 @@ body {
   font-size: 1.5rem; /* text-2xl */
   font-weight: bold;
 }
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+.navbar-link {
+  color: #f6e05e
+}
+.navbar-link:hover {
+  color: #f6e05e
+}
+
+@media (max-width: 760px) {
+  .navbar-links {
+    display: none;
+  }
+}
 
 /* Footer */
 .footer {
@@ -93,6 +110,48 @@ body {
 
 .footer-link:hover {
   color: #edf2f7;
+}
+
+.footer-content-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Adjust max-width as needed */
+    display: flex;
+    flex-direction: column; /* Default stack on mobile */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items for mobile */
+    gap: 1rem; /* Space between blocks on mobile */
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) { /* On desktop, arrange horizontally */
+    .footer-content-wrapper {
+        flex-direction: row;
+        align-items: flex-start; /* Align to top for multi-line text */
+    }
+}
+
+.footer-info {
+    text-align: center; /* Default center for mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* Space between company name and email */
+}
+
+@media (min-width: 768px) {
+    .footer-content-wrapper{
+        flex-direction: row;
+        align-items: flex-start; /* Align to top for multi-line text */
+        justify-content: space-between; /* Re-add space-between for desktop only */
+    }
+}
+
+.footer-company-name {
+    font-weight: bold; /* Make the company name bold */
+    color: #edf2f7; /* Lighter color for company name */
+}
+
+.footer-email {
+    color: #a0aec0; /* Match existing link color */
 }
 
 /* Welcome Section */
@@ -330,16 +389,6 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
 }
 
-.chart-placeholder {
-  width: 100%;
-  height: 6rem; /* h-24 */
-  background-color: #718096; /* gray-600 */
-  border-radius: 0.5rem; /* rounded-lg */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #a0aec0; /* gray-300 */
-}
 
 .stat-description {
   margin-top: 0.5rem; /* mt-2 */
@@ -397,11 +446,14 @@ body {
 /* Trusted By Section */
 .trusted-by-section {
   width: 100%;
-  background-color: #2d3748; /* Gray-800 */
+  background-color: #ffffff; /* Gray-800 */
   padding: 2rem;
   border-radius: 1rem; /* Rounded-2xl */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
   text-align: center;
+}
+.trusted-by-section .section-title {
+  color: #1a202c 
 }
 
 .logo-grid {
@@ -412,6 +464,6 @@ body {
 }
 
 .company-logo {
-  height: 3rem; /* h-12 */
+  height: 4rem; /* h-12 */
   object-fit: contain;
 }

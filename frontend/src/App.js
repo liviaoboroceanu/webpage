@@ -1,6 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'; // Import the HomePage component you'll create next
+// Import placeholder pages you'll create later
+import FeaturesPage from './pages/FeaturesPage'; // Create this file soon
+import PartnersPage from './pages/PartnersPage'; // Create this file soon
+import AboutUsPage from './pages/AboutUsPage';   // Create this file soon
+import ContactPage from './pages/ContactPage';   // Create this file soon
 
 function App() {
   return (
@@ -11,7 +16,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* Add routes for other pages (Features, Pricing, etc.) here as you create them */}
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
 
         {/* Potentially add a global Footer component here later */}
