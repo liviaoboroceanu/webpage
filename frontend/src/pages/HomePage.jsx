@@ -59,16 +59,7 @@ const HomePage = () => {
   return (
     <div className="home-page-container">
       {/* Navbar Section (Simplified for now, will expand later) */}
-      <nav className="navbar">
-  <h1 className="navbar-title">Webpage</h1>
-  <div className="navbar-links"> {/* New wrapper for links */}
-    <Link to="/" className="navbar-link">Home</Link>
-    <Link to="/features" className="navbar-link">Features</Link>
-    <Link to="/partners" className="navbar-link">Partners</Link>
-    <Link to="/about-us" className="navbar-link">About Us</Link>
-    <Link to="/contact" className="navbar-link">Contact</Link>
-  </div>
-</nav>
+  
 
       <main className="main-content">
         {/* Welcome to Acadova Section */}
@@ -209,19 +200,22 @@ const HomePage = () => {
       </main>
 
       {/* Footer Section */}
+
 <footer className="footer">
-  <div className="footer-content-wrapper"> {/* New wrapper for layout */}
-    <div className="footer-info"> {/* New div for left-aligned info */}
+  <div className="footer-content-wrapper">
+    <div className="footer-info">
       <p className="footer-company-name">Acadova Limited, {new Date().getFullYear()}</p>
       <p className="footer-email">Email: <a href="mailto:techsupport@acadova.com" className="footer-link">techsupport@acadova.com</a></p>
     </div>
-    <div className="footer-links"> {/* Existing div for right-aligned links */}
-        <a href="#" className="footer-link">Privacy Policy</a>
-        <a href="#" className="footer-link">Terms of Service</a>
-        <a href="#" className="footer-link">Contact Us</a>
+    <div className="footer-links">
+        {/* These links will now use Link component for React Router */}
+        <Link to="/privacy-policy" className="footer-link">Privacy Policy</Link>
+        <Link to="/contact" className="footer-link">Contact Us</Link>
+        <Link to="/terms-of-service" className="footer-link">Terms of Service</Link>
     </div>
   </div>
 </footer>
+
     </div>
   );
 };

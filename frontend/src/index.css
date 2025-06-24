@@ -467,3 +467,671 @@ body {
   height: 4rem; /* h-12 */
   object-fit: contain;
 }
+
+/* About Us Page Specific Styles */
+.about-us-container {
+  /* Inherits global styles from .app-container */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a202c; /* Ensure consistent dark background */
+  color: #edf2f7; /* Light text */
+}
+
+/* Learning That Works Your Way Banner */
+.about-banner-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+
+  /* --- SOLID YELLOW BACKGROUND FOR LEGIBILITY --- */
+  background-color: #f6e05e; /* Bright yellow */
+
+  min-height: 200px; /* Adjust height as needed to fit text and visual */
+  padding: 2rem; /* Add padding for text */
+
+  /* Use flexbox for centering text within this solid block */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Ensure text itself is centered */
+}
+
+@media (max-width: 768px) {
+  .about-banner-section {
+    min-height: 150px; /* Smaller height on mobile */
+  }
+}
+
+.about-banner-text {
+  color: #1a202c; /* Dark text for strong contrast on yellow */
+  font-size: 2.5rem; /* Adjust as needed */
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: none; /* Remove text shadow as it's no longer needed on solid background */
+  max-width: 800px; /* Constrain text width for readability on large screens */
+  z-index: 1; /* Ensure text is above background */
+}
+
+/* About Intro Section */
+.about-intro-section {
+  width: 100%;
+  max-width: 1000px; /* Constrain width for readability */
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #2d3748; /* Darker background for sections */
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Space between text block and character/benefits */
+  color: #edf2f7;
+}
+
+.about-intro-content {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-intro-content {
+    flex-direction: row; /* Side-by-side on desktop */
+    align-items: flex-start;
+  }
+}
+
+.about-intro-text-block {
+  flex: 1;
+  text-align: center; /* Default center for mobile */
+}
+
+@media (min-width: 768px) {
+  .about-intro-text-block {
+    text-align: left;
+  }
+}
+
+.about-intro-paragraph {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #cbd5e0; /* Light gray text */
+}
+
+.about-highlight-text {
+  font-weight: bold;
+  color: #f6e05e; /* Yellow highlight */
+}
+
+.about-intro-character {
+  width: 12rem; /* Adjust size as needed */
+  height: 12rem; /* Adjust size as needed */
+  border-radius: 9999px; /* Circular */
+  object-fit: cover;
+  border: 4px solid #f6e05e; /* Yellow border */
+}
+
+/* About Benefits Grid (Yellow Circles) */
+.about-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.about-benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit-circle {
+  width: 6rem; /* Size of the circle */
+  height: 6rem;
+  background-color: #f6e05e; /* Yellow background */
+  border-radius: 9999px; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 3rem; /* Controls the size of the emoji/text inside */
+  line-height: 1; /* Helps with vertical centering of content inside */
+}
+
+.benefit-circle img { /* Only if using img tags for icons */
+  max-width: 70%; /* Adjust icon size within circle */
+  max-height: 70%;
+}
+
+.benefit-text {
+  font-size: 0.9rem;
+  color: #cbd5e0; /* Light gray text */
+}
+
+/* Why We Built Acadova Section */
+.why-we-built-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto; /* Space above */
+  padding: 2rem;
+  background-color: #2d3748;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: #edf2f7;
+}
+
+.why-we-built-content {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .why-we-built-content {
+    flex-direction: row-reverse; /* Character on right, text on left */
+    align-items: flex-start;
+  }
+}
+
+.why-we-built-text-block {
+  flex: 1;
+  text-align: center; /* Default center for mobile */
+}
+
+@media (min-width: 768px) {
+  .why-we-built-text-block {
+    text-align: left;
+  }
+}
+
+.why-we-built-title {
+  color: #f6e05e; /* Yellow title */
+  margin-bottom: 1rem;
+}
+
+.why-we-built-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #cbd5e0;
+}
+
+.why-we-built-highlight {
+  font-weight: bold;
+  color: #f6e05e; /* Yellow highlight */
+}
+
+.why-we-built-character {
+  width: 10rem; /* Adjust size */
+  height: 15rem; /* Adjust size */
+  object-fit: contain; /* or cover, depending on aspect ratio */
+}
+
+/* --- Contact Us Page Specific Styles --- */
+.contact-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Background color from App.js's .app-container */
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  gap: 2rem; /* Space between character and bubble */
+  width: 100%;
+  max-width: 1000px; /* Max width for content */
+  padding: 2rem;
+  margin-top: 3rem; /* Space from header */
+}
+
+@media (min-width: 768px) {
+  .contact-section {
+    flex-direction: row; /* Side-by-side on desktop */
+    align-items: flex-start; /* Align top */
+    gap: 4rem;
+  }
+}
+
+.contact-character-wrapper {
+  flex-shrink: 0; /* Don't let character shrink */
+  width: 150px; /* Example size for character circle */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f6e05e; /* Yellow border */
+  display: flex; /* Center image inside */
+  align-items: center;
+  justify-content: center;
+  background-color: #2d3748; /* Background color for character circle */
+}
+
+.contact-character-image {
+  width: 100%; /* Image fills its wrapper */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Keep circular */
+}
+
+.contact-bubble-wrapper {
+  flex-grow: 1; /* Allows bubble to take available space */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between speech bubble and chat bubble */
+  width: 100%; /* Take full width on mobile */
+}
+
+/* Speech Bubble Styling */
+.speech-bubble {
+  background-color: #f6e05e; /* Yellow background */
+  color: #1a202c; /* Dark text */
+  padding: 1.5rem;
+  border-radius: 1rem; /* Rounded corners */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Speech bubble 'tail' - can be done with pseudo-elements */
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 0; /* Adjust size and direction of tail */
+  border-color: #f6e05e transparent transparent transparent;
+  bottom: -15px; /* Position the tail */
+  left: 30px; /* Adjust left position to align with character */
+  transform: rotate(45deg); /* Rotate for angle */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Match bubble shadow */
+  z-index: -1; /* Place behind bubble */
+}
+
+@media (min-width: 768px) { /* Adjust tail for desktop layout */
+    .speech-bubble::before {
+        bottom: auto;
+        top: 30px;
+        left: -15px; /* Position to the left of the bubble */
+        border-width: 20px 0 0 20px; /* Pointing right */
+        border-color: transparent transparent transparent #f6e05e;
+        transform: rotate(45deg); /* Rotate for angle */
+    }
+}
+
+
+.bubble-text-bold {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.bubble-text {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.email-link {
+  color: #1a202c; /* Ensure link color is dark */
+  text-decoration: underline;
+}
+
+/* Chat Bubble Container (Right Side) */
+.chat-bubble-container {
+  background-color: #4a5568; /* Dark gray for chat bubble */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  height: 120px; /* Fixed height for visual consistency */
+  display: flex;
+  align-items: flex-end; /* Content at bottom */
+  justify-content: flex-end; /* Content to the right */
+  position: relative; /* For positioning send icon */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Placeholder for chat bubble content */
+.chat-bubble-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #edf2f7; /* Light text color */
+}
+
+.typing-dots {
+  font-size: 2rem; /* Size for ellipsis */
+  line-height: 1;
+}
+
+.send-icon-placeholder {
+  width: 30px; /* Size for send icon */
+  height: 30px;
+  background-color: #f6e05e; /* Yellow background for send button */
+  border-radius: 50%; /* Circular button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* You can add an SVG icon here later */
+  color: #1a202c;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Adjustments for responsiveness of general content (from HomePage) */
+/* Ensure main-content and section max-widths are still 100% */
+/* Remove fixed max-width on sections if they should stretch full width */
+.welcome-section,
+.what-we-offer-section,
+.statistics-section,
+.customer-reviews-section,
+.trusted-by-section,
+.about-intro-section, /* Add this to stretch about sections as well */
+.why-we-built-section { /* Add this to stretch about sections as well */
+  max-width: 100%; /* Ensure these sections stretch */
+}
+
+/* Footer position adjustment if necessary */
+.footer {
+  margin-top: 3rem; /* Ensure space below content */
+}
+
+/* --- Privacy Policy Page Specific Styles --- */
+.privacy-policy-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Background color inherited from .app-container */
+}
+
+.privacy-policy-section {
+  width: 100%;
+  max-width: 900px; /* Constrain width for readability of long text */
+  margin: 3rem auto; /* Space from header/footer */
+  padding: 2rem;
+  background-color: #2d3748; /* Darker background for the policy content box */
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  color: #edf2f7; /* Light text */
+}
+
+.privacy-page-title {
+  font-size: 2.5rem; /* Large title */
+  font-weight: bold;
+  text-align: center;
+  color: #f6e05e; /* Yellow */
+  margin-bottom: 2rem;
+}
+
+.policy-intro {
+  margin-bottom: 2rem;
+}
+
+.policy-section-block {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #4a5568; /* Subtle separator between sections */
+}
+
+.policy-section-block:last-child {
+  border-bottom: none; /* No border for the last section */
+}
+
+.policy-section-title {
+  font-size: 1.75rem; /* Sub-heading size */
+  font-weight: bold;
+  color: #f6e05e; /* Yellow */
+  margin-bottom: 1rem;
+}
+
+.policy-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cbd5e0; /* Light gray text */
+  margin-bottom: 1rem;
+}
+
+.policy-sub-text {
+  font-size: 0.95rem;
+  color: #a0aec0; /* Slightly lighter gray */
+  line-height: 1.5;
+}
+
+.policy-sub-text-bold {
+  font-weight: bold;
+  color: #edf2f7; /* Brighter text for bold sub-text */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.policy-list {
+  list-style: disc; /* Bullet points */
+  margin-left: 1.5rem; /* Indent list items */
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.policy-list-item {
+  font-size: 0.95rem;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+
+.policy-list-item-bold {
+    font-weight: bold;
+    color: #edf2f7;
+}
+
+.policy-link {
+  color: #f6e05e; /* Yellow link color */
+  text-decoration: underline;
+}
+
+.policy-link:hover {
+  text-decoration: none;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .privacy-policy-section {
+    padding: 1rem; /* Less padding on small screens */
+    margin: 1.5rem auto; /* Less margin */
+  }
+
+  .privacy-page-title {
+    font-size: 2rem;
+  }
+
+  .policy-section-title {
+    font-size: 1.5rem;
+  }
+
+  .policy-paragraph,
+  .policy-sub-text,
+  .policy-list-item {
+    font-size: 0.9rem; /* Smaller text on mobile */
+  }
+}
+
+/* --- Pricing Page Specific Styles --- */
+.pricing-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Background color inherited from .app-container */
+}
+
+.pricing-header-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto 2rem auto;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.pricing-main-title {
+  font-size: 2.5rem; /* Large title */
+  font-weight: bold;
+  color: #edf2f7; /* Light text */
+}
+
+.pricing-plans-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column on mobile */
+  gap: 2rem; /* Space between cards */
+  width: 100%;
+  max-width: 1000px; /* Constrain grid width */
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .pricing-plans-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet/medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-plans-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  }
+}
+
+.pricing-card {
+  background-color: #2d3748; /* Darker gray for card background */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hide anything outside card borders */
+  border: 1px solid #4a5568; /* Subtle border */
+}
+
+.pricing-icon {
+  font-size: 2.5rem; /* Size for lightning bolt icon */
+  color: #f6e05e; /* Yellow color */
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  font-size: 3rem; /* Large price text */
+  font-weight: bold;
+  color: #edf2f7; /* Light text */
+  margin-bottom: 0.5rem;
+}
+
+.plan-price span {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #a0aec0; /* Lighter gray for "/per month" */
+}
+
+.plan-period {
+  font-size: 1.1rem;
+  color: #f6e05e; /* Yellow for "14 Days Free Trial" or similar */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.plan-description {
+  font-size: 0.95rem;
+  color: #a0aec0; /* Light gray text */
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Allows description to take vertical space */
+}
+
+.plan-features {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 1rem 0;
+  width: 100%; /* Take full width of card */
+  text-align: left; /* Align checkmarks and text */
+}
+
+.plan-features li {
+  font-size: 1rem;
+  color: #edf2f7; /* Light text for features */
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between checkmark and text */
+}
+
+.plan-features li:last-child {
+  margin-bottom: 0;
+}
+
+.checkmark {
+  color: #f6e05e; /* Yellow checkmark */
+  font-size: 1.1rem; /* Adjust checkmark size */
+  font-weight: bold;
+}
+
+/* Premium Card Specific Styling (if it has a different background/border) */
+.premium-card {
+  background-color: #3f4a5f; /* Slightly different dark shade for premium */
+  border: 2px solid #f6e05e; /* Yellow border for premium card */
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2); /* More prominent shadow */
+}
+
+
+/* Bottom Contact Us Section */
+.pricing-contact-section {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-bottom: 3rem; /* Space before footer */
+}
+
+.pricing-contact-button {
+  background-color: #f6e05e; /* Yellow button */
+  color: #1a202c; /* Dark text */
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 9999px; /* Pill shape */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Allows padding and transitions */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.pricing-contact-button:hover {
+  background-color: #ecc94b; /* Darker yellow on hover */
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pricing-main-title {
+    font-size: 2rem;
+  }
+  .pricing-plans-grid {
+    padding: 0 1rem; /* Add some horizontal padding */
+  }
+}
+
+.pricing-card-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Ensure text color is inherited from inside the card */
+  display: block; /* Make the link a block element so it wraps the whole card */
+  height: 100%; /* Ensure the link takes full height of the grid cell */
+}
